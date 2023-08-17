@@ -10,9 +10,6 @@
 
 #include "AutonomyConstants.h"
 #include "IdentitySoftware.h"
-#include "drivers/DriveBoard.h"
-#include "drivers/MultimediaBoard.h"
-#include "drivers/NavigationBoard.h"
 
 #include <chrono>
 #include <ctime>
@@ -44,9 +41,4 @@ void InitializeLoggers();    // Method to set up the loggers
 // Versioning:
 extern IdentitySoftware g_pIdentifySoftware;    // Global Version Handler
 
-// Board Interfaces:
-extern DriveBoard g_pDriveBoardInterface;              // Global Drive Board Interface
-extern MultimediaBoard g_pMultimediaBoardInterface;    // Global Multimedia Board Interface
-extern NavigationBoard g_pNavigationBoardInterface;    // Global Navigation Board Interface
-
-#endif                                                 // MRDT_AutonomyGlobals_H
+#endif                                                 // AutonomyGlobals_H

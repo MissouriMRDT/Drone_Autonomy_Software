@@ -29,7 +29,7 @@ CHECK_IF_EXAMPLE_INCLUDED
 #endif
 
 /******************************************************************************
- * @brief Autonomy main function.
+ * @brief Drone Autonomy main function.
  *
  * @return int - Exit status number.
  *
