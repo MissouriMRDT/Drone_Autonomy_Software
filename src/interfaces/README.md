@@ -2,7 +2,7 @@
 
 # Interfaces Directory
 
-The **Interfaces** directory within the **src** directory is dedicated to storing C++ abstract classes or interfaces that define the contract for other classes in the Rover project. This directory focuses on providing a set of common methods and properties that classes can inherit and implement for the sake of organization and consistency.
+The **Interfaces** directory within the **src** directory is dedicated to storing C++ abstract classes or interfaces that define the contract for other classes in the Drone project. This directory focuses on providing a set of common methods and properties that classes can inherit and implement for the sake of organization and consistency.
 
 ## Directory Structure
 
@@ -32,6 +32,6 @@ When working with interfaces and abstract classes, keep the following considerat
 - Use inheritance and polymorphism to achieve code reuse and promote modularity in the project.
 - Regularly review and update the interfaces or abstract classes as the project evolves to accommodate new requirements or changes in functionality.
 
-By utilizing interfaces and abstract classes, you can establish a consistent structure, encourage code modularity, and facilitate the implementation of specific functionalities across the rover project.
+By utilizing interfaces and abstract classes, you can establish a consistent structure, encourage code modularity, and facilitate the implementation of specific functionalities across the drone project.
 
 Happy coding and designing interfaces!
