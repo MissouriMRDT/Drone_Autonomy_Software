@@ -1,6 +1,6 @@
 /******************************************************************************
  * @brief This interface defines the base functions needed to multi-thread a
- *      class in Autonomy_Software. Some methods contain default implementations
+ *      class in Drone_Autonomy_Software. Some methods contain default implementations
  *      and others are pure virtual methods that need to be implemented by the
  *      inheritor.
  *
