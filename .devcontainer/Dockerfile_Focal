@@ -22,8 +22,8 @@ ARG GTEST_VERSION="v1.14.0"
 # Set Labels
 LABEL authors="Missouri S&T Mars Rover Design Team"
 LABEL maintainer="Mars Rover Design Team <marsrover@mst.edu>"
-LABEL org.opencontainers.image.source=https://github.com/missourimrdt/autonomy_software
-LABEL org.opencontainers.image.licenses=GPL-3.0-onlyLABEL
+LABEL org.opencontainers.image.source=https://github.com/missourimrdt/drone_autonomy_software
+LABEL org.opencontainers.image.licenses=GPL-3.0-only
 LABEL org.opencontainers.image.version="v24.0.0"
 LABEL org.opencontainers.image.description="Docker Image for Ubuntu ${UBUNTU_MAJOR}.${UBUNTU_MINOR} with CUDA ${CUDA_MAJOR}.${CUDA_MINOR}, ZED SDK ${ZED_MAJOR}.${ZED_MINOR}, OpenCV ${OPENCV_VERSION}, Quill ${QUILL_VERSION}, and Google Test ${GTEST_VERSION}."
 
@@ -140,10 +140,10 @@ ENV LANGUAGE en_US:en
 ENV LC_ALL en_US.UTF-8  
 
 # Enable Cowsay.
-RUN echo '/usr/games/fortune | /usr/games/cowsay -f `ls /workspaces/Autonomy_Software/data/Cowsay_Cows/*.cow | shuf -n 1`' >> /root/.bashrc
+RUN echo '/usr/games/fortune | /usr/games/cowsay -f `ls /workspaces/Drone_Autonomy_Software/data/Cowsay_Cows/*.cow | shuf -n 1`' >> /root/.bashrc
 
-# Clone Autonomy Software Repository
-RUN git clone --recurse-submodules -j8 https://github.com/MissouriMRDT/Autonomy_Software.git
+# Clone Drone_Autonomy Software Repository
+RUN git clone --recurse-submodules -j8 https://github.com/MissouriMRDT/Drone_Autonomy_Software.git
 
 # Set Working Directory
-WORKDIR /opt/Autonomy_Software/
+WORKDIR /opt/Drone_Autonomy_Software/

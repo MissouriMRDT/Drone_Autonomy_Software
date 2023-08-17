@@ -1,17 +1,17 @@
 {
-    "name": "MRDT Autonomy C++",
+    "name": "MRDT Drone Autonomy C++",
     "runArgs": [
         "--name",
-        "Autonomy_Software_devcontainer",
+        "Drone_Autonomy_Software_devcontainer",
         // "--gpus all", // add all available GPUs
         // "--runtime nvidia", // Use the NVIDIA container runtime.
         "--privileged", // grants permission to the container to access USBs
         "-e DISPLAY" // Makes DISPLAY environment variable available in the container.
         // "-v /tmp/.X11-unix:/tmp/.X11-unix" // Required for container to access display.
     ],
-    // "image": "ghcr.io/missourimrdt/autonomy-jammy:latest",
-    "image": "ghcr.io/missourimrdt/autonomy-focal:latest",
-    // "image": "ghcr.io/missourimrdt/autonomy-jetpack:latest",
+    // "image": "ghcr.io/missourimrdt/drone-autonomy-jammy:latest",
+    "image": "ghcr.io/missourimrdt/drone-autonomy-focal:latest",
+    // "image": "ghcr.io/missourimrdt/drone-autonomy-jetpack:latest",
     // "build": {
     //     "dockerfile": "Dockerfile_Jammy"
     //     "dockerfile": "Dockerfile_Focal"

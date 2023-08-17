@@ -22,7 +22,7 @@ ARG GTEST_VERSION="v1.14.0"
 # Set Labels
 LABEL authors="Missouri S&T Mars Rover Design Team"
 LABEL maintainer="Mars Rover Design Team <marsrover@mst.edu>"
-LABEL org.opencontainers.image.source=https://github.com/missourimrdt/autonomy_software
+LABEL org.opencontainers.image.source=https://github.com/missourimrdt/drone_autonomy_software
 LABEL org.opencontainers.image.licenses=GPL-3.0-only
 LABEL org.opencontainers.image.version="v24.0.0"
 LABEL org.opencontainers.image.description="Docker Image for ${L4T_BASE} ${L4T_MAJOR}.${L4T_MINOR}.${L4T_PATCH} with CUDA ${CUDA_MAJOR}.${CUDA_MINOR}, ZED SDK ${ZED_MAJOR}.${ZED_MINOR}, OpenCV ${OPENCV_VERSION}, Quill ${QUILL_VERSION}, and Google Test ${GTEST_VERSION}."
@@ -135,8 +135,8 @@ RUN git clone --depth 1 --branch ${GTEST_VERSION} https://github.com/google/goog
 # Enable Make Threads
 RUN echo 'export MAKEFLAGS=-j$(($(grep -c "^processor" /proc/cpuinfo) - 1))' >> .bashrc
 
-# Clone Autonomy Software Repository
-RUN git clone --recurse-submodules -j8 https://github.com/MissouriMRDT/Autonomy_Software.git /opt/Autonomy_Software
+# Clone Drone_Autonomy Software Repository
+RUN git clone --recurse-submodules -j8 https://github.com/MissouriMRDT/Drone_Autonomy_Software.git
 
 # Set Working Directory
-WORKDIR /opt/Autonomy_Software/
+WORKDIR /opt/Drone_Autonomy_Software/
