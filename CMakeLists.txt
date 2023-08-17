@@ -1,5 +1,5 @@
 ####################################################################################################################
-##											Autonomy Software												   	  ##
+##										  Drone Autonomy Software												  ##
 ##											v24.00.00 Build 000												 	  ##
 ##										  Mars Rover Design Team												  ##
 ##								   Copyright 2023 - All Rights Reserved										 	  ##
@@ -14,7 +14,7 @@ set(CMAKE_CXX_STANDARD 20)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
 ## Project Name and Software Version Number
-project(Autonomy_Software VERSION 24.00.00)
+project(Drone_Autonomy_Software VERSION 24.00.00)
 
 ## Include Required CMake Packages
 if(CPack_CMake_INCLUDED)
@@ -102,7 +102,7 @@ add_executable(${PROJECT_NAME}   ${External_SRC}
 								 ${Tools_SRC}
 	)
 
-## Set Compile Options for Autonomy Software.
+## Set Compile Options for Drone Autonomy Software.
 if(MSVC) # True when compiler is Microsoft Visual C++/simulation of Visual C++ CL.
 	target_compile_options(${PROJECT_NAME} PRIVATE /W4 /WX)
 else()
