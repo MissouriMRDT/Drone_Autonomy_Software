@@ -28,7 +28,7 @@ sudo chmod +x ./run_valgrind.sh
 
 ## HOW TO INTERPRET VALGRIND OUTPUT
 
-The output of valgrind will likely never show `All heap blocks were freed -- no leaks are possible` unless all of our external libraries fix their code. So valgrinds output with suppressions might look a little different then you're used to. Don't worry though, as long as all of the leaked memory is within the suppressed or still reachable category, we're fine. The example below shows a compile of the Autonomy_Software code that doesn't leak any additional memory.
+The output of valgrind will likely never show `All heap blocks were freed -- no leaks are possible` unless all of our external libraries fix their code. So valgrinds output with suppressions might look a little different then you're used to. Don't worry though, as long as all of the leaked memory is within the suppressed or still reachable category, we're fine. The example below shows a compile of the Drone_Autonomy_Software code that doesn't leak any additional memory.
 
 ```
 ==23697== HEAP SUMMARY:
@@ -44,9 +44,9 @@ The output of valgrind will likely never show `All heap blocks were freed -- no 
 ==23697== 
 ==23697== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 4 from 4)
 --23697-- 
---23697-- used_suppression:     34 dl_init /workspaces/Autonomy_Software/tools/valgrind/opencv_3rdparty.supp:103 suppressed: 158,413 bytes in 223 blocks
---23697-- used_suppression:     15 OpenCV-SingletonLogger /workspaces/Autonomy_Software/tools/valgrind/opencv.supp:222 suppressed: 1,508 bytes in 15 blocks
---23697-- used_suppression:      1 dl_open /workspaces/Autonomy_Software/tools/valgrind/opencv_3rdparty.supp:110 suppressed: 16 bytes in 1 blocks
+--23697-- used_suppression:     34 dl_init /workspaces/Drone_Autonomy_Software/tools/valgrind/opencv_3rdparty.supp:103 suppressed: 158,413 bytes in 223 blocks
+--23697-- used_suppression:     15 OpenCV-SingletonLogger /workspaces/Drone_Autonomy_Software/tools/valgrind/opencv.supp:222 suppressed: 1,508 bytes in 15 blocks
+--23697-- used_suppression:      1 dl_open /workspaces/Drone_Autonomy_Software/tools/valgrind/opencv_3rdparty.supp:110 suppressed: 16 bytes in 1 blocks
 --23697-- used_suppression:      4 dl-hack4-64bit-addr-1 /usr/lib/x86_64-linux-gnu/valgrind/default.supp:1277
 ```
 
@@ -60,7 +60,7 @@ A more stringent and practical definition of a "memory leak" is as follows: memo
 
 Within Valgrind's leak report, the "still reachable" category encompasses allocations that align with only the first definition of a "memory leak." Although these blocks were not freed, they could have been freed if the programmer had desired, as the program was still maintaining pointers to those memory blocks.
 
-In general, there is no need to be concerned about "still reachable" blocks, as they do not pose the same problems that true memory leaks can cause. For example, "still reachable" blocks typically do not lead to heap exhaustion. They are typically one-time allocations, and references to them are retained throughout the process's lifetime. All object pointers within Autonomy_Software should still be cleaned-up as good practice. The only memory that is "still reachable" after our program finished should be that of the 3rd party libraries we use.
+In general, there is no need to be concerned about "still reachable" blocks, as they do not pose the same problems that true memory leaks can cause. For example, "still reachable" blocks typically do not lead to heap exhaustion. They are typically one-time allocations, and references to them are retained throughout the process's lifetime. All object pointers within Drone_Autonomy_Software should still be cleaned-up as good practice. The only memory that is "still reachable" after our program finished should be that of the 3rd party libraries we use.
 
 ## Future Proofing
 

@@ -2,9 +2,9 @@
 
 # Define the path to the executable
 if [ "$1" = "GitHub-Action" ]; then
-  executable_path="/opt/Autonomy_Software/build/Autonomy_Software"
+  executable_path="/opt/Drone_Autonomy_Software/build/Drone_Autonomy_Software"
 else
-  executable_path="/workspaces/Autonomy_Software/build/Autonomy_Software"
+  executable_path="/workspaces/Drone_Autonomy_Software/build/Drone_Autonomy_Software"
 fi
 
 # Check if the executable exists
@@ -25,7 +25,7 @@ supp_files=$(find "$script_dir" -maxdepth 1 -type f -name "*.supp")
 # Construct the Valgrind command
 valgrind_cmd="valgrind -s --leak-check=yes --show-leak-kinds=all "
 if [ "$1" = "GitHub-Action" ]; then
-  valgrind_cmd+=" --log-file=/opt/Autonomy_Software/tools/valgrind/valgrind.rpt"
+  valgrind_cmd+=" --log-file=/opt/Drone_Autonomy_Software/tools/valgrind/valgrind.rpt"
 fi
 for supp_file in $supp_files; do
   valgrind_cmd+=" --suppressions=$supp_file"
