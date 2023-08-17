@@ -1,6 +1,6 @@
 /******************************************************************************
- * @brief Defines and implements functions related to operations on numbers within
- * 		the numops namespace.
+ * @brief Defines and implements functions related to operations on numbers
+ * 		  within the numops namespace.
  *
  * @file NumberOperations.hpp
  * @author Eli Byrd (edbgkk@mst.edu), ClayJay3 (claytonraycowen@gmail.com)
@@ -16,7 +16,7 @@
 
 /******************************************************************************
  * @brief Namespace containing functions related to operations on numbers and
- * 		other datatypes.
+ * 		  other datatypes.
  *
  *
  * @author ClayJay3 (claytonraycowen@gmail.com)
