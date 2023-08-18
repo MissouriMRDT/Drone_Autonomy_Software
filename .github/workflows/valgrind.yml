@@ -31,18 +31,15 @@ jobs:
           git checkout $branch
           git pull
 
-      - name: Build Executable
+      - name: Build Executable and Run
         run: |
           cd /opt/Autonomy_Software/
           mkdir build
           cd build
           cmake ..
           make
-
-      - name: Run Valgrind
-        run: |
-          chmod 777 /opt/Autonomy_Software/tools/valgrind/run_valgrind.sh
-          /opt/Autonomy_Software/tools/valgrind/run_valgrind.sh "GitHub-Action"
+          chmod 777 tools/valgrind/run_valgrind.sh
+          tools/valgrind/run_valgrind.sh "GitHub-Action"
 
       - name: Analyse Valgrind - Definitely Lost
         if: success() || failure()
