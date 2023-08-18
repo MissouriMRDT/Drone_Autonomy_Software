@@ -9,9 +9,9 @@
         "-e DISPLAY" // Makes DISPLAY environment variable available in the container.
         // "-v /tmp/.X11-unix:/tmp/.X11-unix" // Required for container to access display.
     ],
-    // "image": "ghcr.io/missourimrdt/drone-autonomy-jammy:latest",
-    "image": "ghcr.io/missourimrdt/drone-autonomy-focal:latest",
-    // "image": "ghcr.io/missourimrdt/drone-autonomy-jetpack:latest",
+    // "image": "ghcr.io/missourimrdt/drone-jammy:latest",
+    "image": "ghcr.io/missourimrdt/drone-focal:latest",
+    // "image": "ghcr.io/missourimrdt/drone-jetpack:latest",
     // "build": {
     //     "dockerfile": "Dockerfile_Jammy"
     //     "dockerfile": "Dockerfile_Focal"
