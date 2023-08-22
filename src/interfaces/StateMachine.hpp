@@ -9,6 +9,7 @@
  ******************************************************************************/
 
 #include "../AutonomyGlobals.h"
+#include "../AutonomyLogging.h"
 
 // Forward References
 struct IdleState;
@@ -39,6 +40,5 @@ struct StateMachine : sc::state_machine<StateMachine, IdleState>
  * @author Eli Byrd (edbgkk@mst.edu)
  * @date 2023-07-31
  ******************************************************************************/
-
 
 #include "../states/IdleState.hpp"

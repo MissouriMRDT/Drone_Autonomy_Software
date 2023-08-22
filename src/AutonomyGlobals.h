@@ -15,8 +15,6 @@
 #include <ctime>
 #include <iostream>
 
-#include <quill/Quill.h>
-
 #include <boost/statechart/custom_reaction.hpp>
 #include <boost/statechart/event.hpp>
 #include <boost/statechart/state.hpp>
@@ -31,14 +29,7 @@ namespace mpl = boost::mpl;
 #ifndef AUTONOMY_GLOBALS_H
 #define AUTONOMY_GLOBALS_H
 
-// Logging:
-extern quill::Logger* g_qFileLogger;
-extern quill::Logger* g_qConsoleLogger;
-extern quill::Logger* g_qSharedLogger;
-
-void InitializeLoggers();    // Method to set up the loggers
-
 // Versioning:
 extern IdentitySoftware g_pIdentifySoftware;    // Global Version Handler
 
-#endif                                                 // AutonomyGlobals_H
+#endif                                          // AutonomyGlobals_H
