@@ -138,7 +138,7 @@ RUN git clone --depth 1 --branch ${GTEST_VERSION} https://github.com/google/goog
 RUN git clone --depth 1 --branch ${MAV_VERSION} https://github.com/mavlink/mavsdk.git && \
     cd mavsdk && \
     git submodule update --init --recursive && \
-    cmake -DCMAKE_BUILD_TYPE=Release -DBUILD_SHARED_LIBS=OFF -Bbuild/default -H. && \
+    cmake -DCMAKE_BUILD_TYPE=Release -DBUILD_SHARED_LIBS=ON -Bbuild/default -H. && \
     cmake --build build/default && \
     cd .. && \
     rm -rf mavsdk
