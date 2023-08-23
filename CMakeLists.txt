@@ -71,8 +71,11 @@ target_link_libraries(GTest::GTest INTERFACE gtest_main)
 find_package(Eigen3 3.3 REQUIRED NO_MODULE)
 
 ## Find OpenCV
-find_package( OpenCV REQUIRED )
+find_package(OpenCV REQUIRED)
 include_directories( ${OpenCV_INCLUDE_DIRS} )
+
+## Find MAVSDK
+find_package(MAVSDK REQUIRED)
 
 ## Enable to CTest and Google Test Frameworks
 enable_testing()
@@ -116,6 +119,7 @@ target_link_libraries(${PROJECT_NAME} PRIVATE   Threads::Threads
 												Eigen3::Eigen
                                                 quill::quill
 												${OpenCV_LIBS}
+                                                MAVSDK::mavsdk
                                                 RoveComm_CPP
     )
 
