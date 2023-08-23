@@ -47,8 +47,8 @@ RUN apt-get update && apt-get install --no-install-recommends -y \
     cmake git libgtk2.0-dev pkg-config libavcodec-dev libavformat-dev \
     libtbb2 libtbb-dev libjpeg-dev libpng-dev libtiff-dev tzdata curl \
     yasm libatlas-base-dev gfortran libpq-dev libavutil-dev libpostproc-dev \
-    libxine2-dev libglew-dev libtiff5-dev zlib1g-dev cowsay locales \
-    libeigen3-dev python3-dev python3-pip python3-numpy libx11-dev \
+    libxine2-dev libglew-dev libtiff5-dev zlib1g-dev cowsay locales libeigen3-dev \
+    python3-dev python3-pip python3-numpy python3-future libx11-dev colordiff \
     libboost-all-dev valgrind doxygen graphviz htop nano fortune fortunes
 
 # Install Required Python Packages
@@ -133,12 +133,12 @@ RUN git clone --depth 1 --branch ${GTEST_VERSION} https://github.com/google/goog
 
 # Install MAVSDK from Source
 RUN git clone --depth 1 --branch ${MAV_VERSION} https://github.com/mavlink/mavsdk.git && \
-    mkdir MAVSDK/build && \
-    cd MAVSDK/build && \
-    cmake -Bbuild/default -DCMAKE_BUILD_TYPE=Release -H. && \
-    cmake --build build/default -j8 && \
-    cd ../.. && \
-    rm -rf MAVSDK
+    cd mavsdk && \
+    git submodule update --init --recursive && \
+    cmake -DCMAKE_BUILD_TYPE=Release -DBUILD_SHARED_LIBS=OFF -Bbuild/default -H. && \
+    cmake --build build/default && \
+    cd .. && \
+    rm -rf mavsdk
 
 # Enable Make Threads
 RUN echo 'export MAKEFLAGS=-j$(($(grep -c "^processor" /proc/cpuinfo) - 1))' >> /root/.bashrc
