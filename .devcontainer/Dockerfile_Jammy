@@ -18,6 +18,7 @@ ARG CMAKE_VERSION="3.24.3"
 ARG OPENCV_VERSION="4.8.0"
 ARG QUILL_VERSION="v3.3.1"
 ARG GTEST_VERSION="v1.14.0"
+ARG MAV_VERSION="v1.4.16"
 
 # Set Labels
 LABEL authors="Missouri S&T Mars Rover Design Team"
@@ -129,6 +130,15 @@ RUN git clone --depth 1 --branch ${GTEST_VERSION} https://github.com/google/goog
     make install && \
     cd ../.. && \
     rm -rf googletest
+
+# Install MAVSDK from Source
+RUN git clone --depth 1 --branch ${MAV_VERSION} https://github.com/mavlink/mavsdk.git && \
+    cd mavsdk && \
+    git submodule update --init --recursive && \
+    cmake -DCMAKE_BUILD_TYPE=Release -DBUILD_SHARED_LIBS=OFF -Bbuild/default -H. && \
+    cmake --build build/default && \
+    cd .. && \
+    rm -rf mavsdk
 
 # Enable Make Threads
 RUN echo 'export MAKEFLAGS=-j$(($(grep -c "^processor" /proc/cpuinfo) - 1))' >> /root/.bashrc
