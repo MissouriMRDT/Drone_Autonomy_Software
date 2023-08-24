@@ -50,7 +50,7 @@ RUN apt-get update && apt-get install --no-install-recommends -y \
     libpostproc-dev libswscale-dev libtbb-dev libtbb2 libtesseract-dev libtiff-dev libv4l-dev \
     libxine2-dev libxvidcore-dev libx264-dev libgtkglext1 libgtkglext1-dev pkg-config qv4l2 \
     v4l-utils zlib1g-dev python3-dev python-numpy python3-future colordiff \
-    libboost-all-dev valgrind doxygen graphviz nano
+    libboost-all-dev valgrind doxygen graphviz nano dos2unix
 
 #This symbolic link is needed to use the streaming features on Jetson inside a container
 RUN ln -sf /usr/lib/aarch64-linux-gnu/tegra/libv4l2.so.0 /usr/lib/aarch64-linux-gnu/libv4l2.so
@@ -64,6 +64,7 @@ RUN apt-get install  --no-install-recommends -y \
 # Install CMake
 COPY install-cmake.sh /tmp/
 RUN if [ "${CMAKE_VERSION}" != "none" ]; then \
+    dos2unix /tmp/install-cmake.sh && \
     chmod +x /tmp/install-cmake.sh && /tmp/install-cmake.sh ${CMAKE_VERSION}; \
     fi && \
     rm -f /tmp/install-cmake.sh
