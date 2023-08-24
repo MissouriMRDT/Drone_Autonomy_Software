@@ -139,7 +139,7 @@ RUN git clone --depth 1 --branch ${MAV_VERSION} https://github.com/mavlink/mavsd
     cd mavsdk && \
     git submodule update --init --recursive && \
     cmake -DCMAKE_BUILD_TYPE=Release -DBUILD_SHARED_LIBS=ON -Bbuild/default -H. && \
-    cmake --build build/default && \
+    sudo cmake --build build/default --target install && \
     cd .. && \
     rm -rf mavsdk
 
