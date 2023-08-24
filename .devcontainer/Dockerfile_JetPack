@@ -34,6 +34,10 @@ RUN echo "America/Chicago" > /etc/localtime
 # Set L4T Version
 RUN echo "# R${L4T_MAJOR} (release), REVISION: ${L4T_MINOR}.${L4T_PATCH}" > /etc/nv_tegra_release
 
+# Install Required Ubuntu Packages
+RUN apt-get update && apt-get install --no-install-recommends -y \
+    python3-future colordiff
+
 # Set Working Directory
 WORKDIR /opt
 
