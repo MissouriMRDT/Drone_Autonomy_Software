@@ -10,7 +10,7 @@
         // "-v /tmp/.X11-unix:/tmp/.X11-unix" // Required for container to access display.
     ],
     // "image": "ghcr.io/missourimrdt/drone-jammy:latest",
-    "image": "ghcr.io/missourimrdt/drone-focal:latest",
+    "image": "ghcr.io/missourimrdt/drone-focal:2023-08-24",
     // "image": "ghcr.io/missourimrdt/drone-jetpack:latest",
     // "build": {
     //     "dockerfile": "Dockerfile_Jammy"
