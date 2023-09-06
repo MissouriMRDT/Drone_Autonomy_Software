@@ -29,9 +29,6 @@ ARG DEBIAN_FRONTEND=noninteractive
 ENV NVIDIA_DRIVER_CAPABILITIES \
     ${NVIDIA_DRIVER_CAPABILITIES:+$NVIDIA_DRIVER_CAPABILITIES,}compute,video,utility,graphics
 
-# Set Timezone
-RUN echo "America/Chicago" > /etc/localtime
-
 # Set CUDA Version
 RUN echo "CUDA Version ${CUDA_MAJOR}.${CUDA_MINOR}.0" > /usr/local/cuda/version.txt
 

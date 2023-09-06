@@ -32,4 +32,4 @@ namespace mpl = boost::mpl;
 // Versioning:
 extern IdentitySoftware g_pIdentifySoftware;    // Global Version Handler
 
-#endif                                          // AutonomyGlobals_H
+#endif                                          // AUTONOMY_GLOBALS_H
