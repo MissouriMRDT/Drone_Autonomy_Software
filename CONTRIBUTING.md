@@ -1,4 +1,4 @@
-\page CONTRIBUTING Contributing Guide
+\page md_CONTRIBUTING Contributing Guide
 
 # Contributing to Drone Autonomy Software
 ## Contributing
