@@ -105,8 +105,8 @@ IF (CMAKE_SYSTEM_PROCESSOR MATCHES aarch64)
     add_definitions(-DJETSON_STYLE)
 ENDIF()
 
-## Find MAVSDK
-find_package(MAVSDK REQUIRED)
+# ## Find MAVSDK
+# find_package(MAVSDK REQUIRED)
 
 ## Enable to CTest and Google Test Frameworks
 enable_testing()
@@ -136,7 +136,7 @@ target_link_libraries(${PROJECT_NAME} PRIVATE   Threads::Threads
 												Eigen3::Eigen
                                                 quill::quill
 												${OpenCV_LIBS}
-                                                MAVSDK::mavsdk
+                                                # MAVSDK::mavsdk
                                                 ${ZED_LIBS} 
                                                 RoveComm_CPP
     )
