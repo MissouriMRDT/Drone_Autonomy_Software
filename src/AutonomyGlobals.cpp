@@ -80,3 +80,6 @@ void InitializeLoggers()
 }
 
 IdentitySoftware g_pIdentifySoftware;
+
+// Camera handler.
+CameraHandlerThread* g_pCameraHandler;

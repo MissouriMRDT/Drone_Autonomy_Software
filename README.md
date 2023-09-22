@@ -13,11 +13,8 @@
     <a href="https://github.com/MissouriMRDT/Drone_Autonomy_Software/actions/workflows/tests.yml">
       <img src="https://img.shields.io/github/actions/workflow/status/missourimrdt/drone_autonomy_software/tests.yml?branch=development&label=Unit%20Tests&style=flat-round" alt="tests-ci" />
     </a>
-    <a href="https://github.com/MissouriMRDT/Drone_Autonomy_Software/actions/workflows/valgrind.yml">
-      <img src="https://img.shields.io/github/actions/workflow/status/missourimrdt/drone_autonomy_software/valgrind.yml?branch=development&label=Valgrind&style=flat-round" alt="valgrind-ci" />
-    </a>
-    <a href="https://github.com/MissouriMRDT/Drone_Autonomy_Software/actions/workflows/doxygen_generate.yml">
-      <img src="https://img.shields.io/github/actions/workflow/status/missourimrdt/drone_autonomy_software/doxygen_generate.yml?branch=development&label=Docs&style=flat-round" alt="docs-ci" />
+    <a href="https://github.com/MissouriMRDT/Autonomy_Software/actions/workflows/doxygen_generate.yml">
+      <img src="https://img.shields.io/github/actions/workflow/status/missourimrdt/autonomy_software/doxygen_generate.yml?branch=development&label=Docs&style=flat-round" alt="docs-ci" />
     </a>
     <a href="https://github.com/MissouriMRDT/Drone_Autonomy_Software/actions/workflows/clang_check.yml">
       <img src="https://img.shields.io/github/actions/workflow/status/missourimrdt/drone_autonomy_software/clang_check.yml?branch=development&label=Clang&style=flat-round" alt="clang-ci" />
