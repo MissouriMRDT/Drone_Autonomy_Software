@@ -36,4 +36,4 @@ extern IdentitySoftware g_pIdentifySoftware;    // Global Version Handler
 // Camera Handler:
 extern CameraHandlerThread* g_pCameraHandler;
 
-#endif                                                 // AUTONOMY_GLOBALS_H
+#endif    // AUTONOMY_GLOBALS_H
