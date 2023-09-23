@@ -3,13 +3,13 @@
     "runArgs": [
         "--name",
         "Drone_Autonomy_Software_devcontainer",
-        // "--gpus all", // add all available GPUs
+        //"--gpus all", // add all available GPUs
         // "--runtime nvidia", // Use the NVIDIA container runtime.
         "--privileged", // grants permission to the container to access USBs
         "-e DISPLAY" // Makes DISPLAY environment variable available in the container.
         // "-v /tmp/.X11-unix:/tmp/.X11-unix" // Required for container to access display.
     ],
-    // "image": "ghcr.io/missourimrdt/drone-jammy:latest",
+    //"image": "ghcr.io/missourimrdt/drone-jammy:latest",
     "image": "ghcr.io/missourimrdt/drone-focal:2023-09-19",
     // "image": "ghcr.io/missourimrdt/drone-jetpack:latest",
     // "build": {
