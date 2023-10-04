@@ -1,6 +1,5 @@
 # Base Image 
 FROM ghcr.io/missourimrdt/autonomy-focal:latest
-FROM jonasvautherin/px4-gazebo-headless:1.13.3
 
 # Install Variables
 ARG UBUNTU_MAJOR="20"
@@ -69,3 +68,6 @@ RUN git clone --recurse-submodules -j8 https://github.com/MissouriMRDT/Drone_Aut
 
 # Set Working Directory
 WORKDIR /opt/Drone_Autonomy_Software/
+
+# Install PX4-Gazebo-Headless Docker Image
+FROM jonasvautherin/px4-gazebo-headless:1.13.3
