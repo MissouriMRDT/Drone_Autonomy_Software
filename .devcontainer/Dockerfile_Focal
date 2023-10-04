@@ -1,5 +1,6 @@
 # Base Image 
 FROM ghcr.io/missourimrdt/autonomy-focal:latest
+FROM jonasvautherin/px4-gazebo-headless:1.13.3
 
 # Install Variables
 ARG UBUNTU_MAJOR="20"
