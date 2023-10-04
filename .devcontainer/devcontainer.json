@@ -10,13 +10,13 @@
         // "-v /tmp/.X11-unix:/tmp/.X11-unix" // Required for container to access display.
     ],
     //"image": "ghcr.io/missourimrdt/drone-jammy:latest",
-    //"image": "ghcr.io/missourimrdt/drone-focal:2023-09-19",
+    "image": "ghcr.io/missourimrdt/drone-focal:2023-10-04-special",
     // "image": "ghcr.io/missourimrdt/drone-jetpack:latest",
-     "build": {
+    // "build": {
     //     "dockerfile": "Dockerfile_Jammy"
-         "dockerfile": "Dockerfile_Focal"
+    //     "dockerfile": "Dockerfile_Focal"
     //     "dockerfile": "Dockerfile_JetPack"
-     },
+    // },
     // Features to add to the dev container. More info: https://containers.dev/features.
     // "features": {},
     // Use 'forwardPorts' to make a list of ports inside the container available locally.
